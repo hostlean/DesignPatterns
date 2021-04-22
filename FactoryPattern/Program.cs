@@ -17,18 +17,22 @@ namespace FactoryPattern
         }
     }
     
+    
+    //Creator subclasses will override the Creator class' methods
     public abstract class Creator
     {
         public abstract IProduct CreateProduct();
     }
     
     
+    //Product classes will override this interface's methods;
     public interface IProduct
     {
         public void CreatedMessage();
     }
     
     
+    //Concrete creator classes will create the related products
     public class ConcreteCreatorA : Creator
     {
         public override IProduct CreateProduct()
@@ -46,7 +50,7 @@ namespace FactoryPattern
         }
     }
     
-    
+    //These are different products but they are using the same interface
     public class ConcreteProductA : IProduct
     {
 
@@ -74,11 +78,4 @@ namespace FactoryPattern
             Console.WriteLine("Product B is created.");
         }
     }
-    
-    
-    
-    
-    
-    
-    
 }
