@@ -14,6 +14,8 @@ namespace FactoryPattern
 
             creatorA.CreateProduct();
 
+            creatorB.CreateProduct();
+
         }
     }
     
